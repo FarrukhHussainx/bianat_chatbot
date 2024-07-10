@@ -1,6 +1,7 @@
 // src/components/SideDrawer.js
 
 import React, { useState } from "react";
+import Modal from "./Modal";
 
 const SideDrawer = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -29,14 +30,7 @@ const SideDrawer = () => {
         >
           <img className="w-12 h-12 z-10" src="/Vector.png" alt="companylogo" />
         </button>
-        <nav className="mt-16">
-          <ul>
-            <li className="p-4 hover:bg-gray-700">Home</li>
-            <li className="p-4 hover:bg-gray-700">About</li>
-            <li className="p-4 hover:bg-gray-700">Services</li>
-            <li className="p-4 hover:bg-gray-700">Contact</li>
-          </ul>
-        </nav>
+        <Modal />
       </div>
 
       {isOpen && (
