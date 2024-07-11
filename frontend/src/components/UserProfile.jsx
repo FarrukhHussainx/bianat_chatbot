@@ -1,7 +1,9 @@
 import { Menu, MenuButton, MenuItem, MenuItems } from "@headlessui/react";
 import { RiArrowDropDownLine } from "react-icons/ri";
 import { FaRegUser } from "react-icons/fa";
-
+import { BiCustomize } from "react-icons/bi";
+import { IoSettingsOutline } from "react-icons/io5";
+import { IoIosLogOut } from "react-icons/io";
 export default function UserProfile() {
   return (
     <div className="fixed top-24 w-52 text-right">
@@ -13,26 +15,33 @@ export default function UserProfile() {
         <MenuItems
           transition
           anchor="bottom end"
-          className="w-52 origin-top-right rounded-xl border border-white/5 bg-white/5 p-1 text-sm/6 text-white transition duration-100 ease-out [--anchor-gap:var(--spacing-1)] focus:outline-none data-[closed]:scale-95 data-[closed]:opacity-0"
+          className="w-52 origin-top-right rounded-xl border mt-2 border-white/5 bg-white/5 p-3 text-sm/6 text-white transition duration-100 ease-out [--anchor-gap:var(--spacing-1)] focus:outline-none data-[closed]:scale-95 data-[closed]:opacity-0"
         >
-          <div className="my-1 h-px bg-white" />
           <MenuItem>
-            <button className="group flex w-full items-center gap-2 rounded-lg py-1.5 px-3 data-[focus]:bg-white/10">
-              {/* <ArchiveBoxXMarkIcon className="size-4 fill-white/30" /> */}
-              Archive
-              <kbd className="ml-auto hidden font-sans text-xs text-white/50 group-data-[focus]:inline">
-                ⌘A
-              </kbd>
-            </button>
+            <div className="flex items-center gap-2 mb-2">
+              <FaRegUser />
+              <h1>My Bianat</h1>
+            </div>
           </MenuItem>
           <MenuItem>
-            <button className="group flex w-full items-center gap-2 rounded-lg py-1.5 px-3 data-[focus]:bg-white/10">
-              {/* <TrashIcon className="size-4 fill-white/30" /> */}
-              Delete
-              <kbd className="ml-auto hidden font-sans text-xs text-white/50 group-data-[focus]:inline">
-                ⌘D
-              </kbd>
-            </button>
+            <div className="flex items-center gap-2 mb-2">
+              <BiCustomize />
+              <h1>Customize Bianat</h1>
+            </div>
+          </MenuItem>
+          <MenuItem>
+            <div className="flex items-center gap-2 mb-2">
+              <IoSettingsOutline />
+              <h1>Settings</h1>
+            </div>
+          </MenuItem>
+
+          <div className="my-1 h-px bg-white mb-2" />
+          <MenuItem>
+            <div className="flex items-center gap-2 mb-2">
+              <IoIosLogOut />
+              <h1>Log Out</h1>
+            </div>
           </MenuItem>
         </MenuItems>
       </Menu>

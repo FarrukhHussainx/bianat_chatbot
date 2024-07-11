@@ -4,7 +4,7 @@ import { FaApple } from "react-icons/fa";
 import { FaGoogle } from "react-icons/fa";
 import { FaMicrosoft } from "react-icons/fa";
 
-export default function LoginModal() {
+export default function RegisterModal() {
   let [isOpen, setIsOpen] = useState(false);
 
   function open() {
@@ -21,7 +21,7 @@ export default function LoginModal() {
         onClick={open}
         className="rounded-md bg-[#004F84] py-2 px-4 text-sm font-medium text-white focus:outline-none data-[hover]:bg-black/30 data-[focus]:outline-1 data-[focus]:outline-white"
       >
-        Login
+        Register
       </Button>
 
       <Dialog
@@ -37,6 +37,12 @@ export default function LoginModal() {
               className="w-full max-w-md rounded-xl bg-white/5 p-6 backdrop-blur-2xl duration-300 ease-out data-[closed]:transform-[scale(95%)] data-[closed]:opacity-0"
             >
               <div className="">
+                <input
+                  className="w-full bg-[#393939] rounded-md p-2 mb-3 shadow-sm"
+                  type="text"
+                  placeholder="password"
+                  required
+                />
                 <input
                   className="w-full bg-[#393939] rounded-md p-2 mb-3 shadow-sm"
                   type="email"
@@ -57,8 +63,8 @@ export default function LoginModal() {
                   Continue
                 </Button>
                 <p className="text-white text-xs text-center mb-2">
-                  Don't have an account?
-                  <span className="text-[#1B8A35]"> Sign Up</span>
+                  Already have an account?
+                  <span className="text-[#1B8A35]"> Login</span>
                 </p>
                 <div className="flex justify-center items-center gap-2 mb-2 text-[#C0C0C0]">
                   <hr className="w-4/12" />

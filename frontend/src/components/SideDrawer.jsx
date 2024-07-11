@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import { MdNotes } from "react-icons/md";
 import LoginModal from "./LoginModal";
-import RegisterModal from "./RegisterDropDown";
+import RegisterModal from "./RegisterModal";
 
 const SideDrawer = () => {
   const [isOpen, setIsOpen] = useState(false);
