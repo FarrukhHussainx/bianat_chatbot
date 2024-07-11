@@ -11,7 +11,11 @@ const Search = ({ setMessage }) => {
             placeholder="Message Bianat"
           />
           <span className="absolute inset-y-0 right-2 flex items-center ">
-            <img src="/send.png" alt="" onClick={() => setMessage("hello")} />
+            <img
+              src="/images/send.png"
+              alt=""
+              onClick={() => setMessage("hello")}
+            />
           </span>
         </div>
         <p className="text-[#c0c0c0] mt-5">

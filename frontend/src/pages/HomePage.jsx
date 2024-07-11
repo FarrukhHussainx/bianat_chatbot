@@ -1,11 +1,13 @@
 import { useEffect, useState } from "react";
-import SideDrawer from "./components/SideDrawer";
-import Search from "./components/Search";
-import QueryResponse from "./components/QueryResponse";
-import Hero from "./components/Hero";
-import SplashScreen from "./pages/SplashScreen";
+import SideDrawer from "../components/SideDrawer";
+import Search from "../components/Search";
+import QueryResponse from "../components/QueryResponse";
+import Hero from "../components/Hero";
+import SplashScreen from "./SplashScreen";
+import DropDown from "../components/DropDown";
+import UserProfile from "../components/UserProfile";
 
-export default function App() {
+export default function HomePage() {
   const [message, setMessage] = useState("");
   const [isLoading, setIsLoading] = useState(true);
 
@@ -24,6 +26,8 @@ export default function App() {
   return (
     <div className=" h-screen bg-[#222222]">
       <SideDrawer />
+      <DropDown />
+      <UserProfile />
 
       {/* Hero */}
       <Hero message={message} />

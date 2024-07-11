@@ -1,7 +1,7 @@
 import { Button, Dialog, DialogPanel, DialogTitle } from "@headlessui/react";
 import { useState } from "react";
 
-export default function Modal() {
+export default function RegisterModal() {
   let [isOpen, setIsOpen] = useState(false);
 
   function open() {
@@ -16,9 +16,9 @@ export default function Modal() {
     <>
       <Button
         onClick={open}
-        className="rounded-md bg-black/20 py-2 px-4 text-sm font-medium text-white focus:outline-none data-[hover]:bg-black/30 data-[focus]:outline-1 data-[focus]:outline-white"
+        className="rounded-md bg-[#004F84] py-2 px-4 text-sm font-medium text-white focus:outline-none data-[hover]:bg-black/30 data-[focus]:outline-1 data-[focus]:outline-white"
       >
-        Open dialog
+        Register
       </Button>
 
       <Dialog

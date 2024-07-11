@@ -1,7 +1,9 @@
 // src/components/SideDrawer.js
 
 import React, { useState } from "react";
-import Modal from "./Modal";
+import { MdNotes } from "react-icons/md";
+import LoginModal from "./LoginModal";
+import RegisterModal from "./RegisterDropDown";
 
 const SideDrawer = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -14,9 +16,9 @@ const SideDrawer = () => {
     <>
       <button
         onClick={toggleDrawer}
-        className="fixed top-4 left-4 bg-[#393939] text-white  pl-4 pr-4  rounded-md"
+        className="fixed top-4 left-4 bg-[#393939] text-white p-1  pl-2 pr-2  rounded-md"
       >
-        <img className="w-12 h-12" src="/Vector.png" alt="companylogo" />
+        <MdNotes />
       </button>
 
       <div
@@ -28,9 +30,22 @@ const SideDrawer = () => {
           onClick={toggleDrawer}
           className="absolute top-4 right-4  text-white p-2 rounded"
         >
-          <img className="w-12 h-12 z-10" src="/Vector.png" alt="companylogo" />
+          <MdNotes />
         </button>
-        <Modal />
+        <div className="h-full flex justify-center items-end pb-8 text-white">
+          <div>
+            <div className="flex flex-col w-fit gap-1 mx-auto mb-3 p-3">
+              <h1 className="text-base">Sign up or Log in</h1>
+              <p className="text-xs">
+                Get smarter responses ,images, upload files and more
+              </p>
+            </div>
+            <div className="flex flex-col w-fit gap-3 mx-auto">
+              <LoginModal />
+              <RegisterModal />
+            </div>
+          </div>
+        </div>
       </div>
 
       {isOpen && (
