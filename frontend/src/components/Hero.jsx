@@ -7,7 +7,7 @@ const Hero = ({ message }) => {
       {!message && (
         <div className="flex flex-col justify-center items-center w-full h-full text-white">
           <img src="/images/companylogo.png" alt="" />
-          <div className="grid grid-cols-1  md:grid-cols-2 p-5 gap-4 w-8/12 items-center">
+          <div className="grid grid-cols-1  md:grid-cols-2 p-2 md:p-5 gap-1 md:gap-4 w-8/12 items-center">
             <HeroItems
               title={"Real-Time Market Data"}
               description={"Up-To-The-Minute Information"}

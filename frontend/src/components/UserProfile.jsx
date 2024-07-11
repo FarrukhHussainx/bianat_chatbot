@@ -1,9 +1,19 @@
 import { Menu, MenuButton, MenuItem, MenuItems } from "@headlessui/react";
-import { RiArrowDropDownLine } from "react-icons/ri";
 import { FaRegUser } from "react-icons/fa";
-import { BiCustomize } from "react-icons/bi";
-import { IoSettingsOutline } from "react-icons/io5";
 import { IoIosLogOut } from "react-icons/io";
+import CustomizeModal from "./CustomizeModal";
+import SettingsModal from "./SettingsModal";
+
+// const data = [
+//   { icon: <FaRegUser />, title: "My Bianat", model: <CustomizeModal /> },
+//   {
+//     icon: <BiCustomize />,
+//     title: "Customize Bianat",
+//     model: <CustomizeModal />,
+//   },
+//   { icon: <IoSettingsOutline />, title: "Settings", model: <CustomizeModal /> },
+// ];
+
 export default function UserProfile() {
   return (
     <div className="fixed top-24 w-52 text-right">
@@ -24,18 +34,11 @@ export default function UserProfile() {
             </div>
           </MenuItem>
           <MenuItem>
-            <div className="flex items-center gap-2 mb-2">
-              <BiCustomize />
-              <h1>Customize Bianat</h1>
-            </div>
+            <CustomizeModal />
           </MenuItem>
           <MenuItem>
-            <div className="flex items-center gap-2 mb-2">
-              <IoSettingsOutline />
-              <h1>Settings</h1>
-            </div>
+            <SettingsModal />
           </MenuItem>
-
           <div className="my-1 h-px bg-white mb-2" />
           <MenuItem>
             <div className="flex items-center gap-2 mb-2">

@@ -4,7 +4,7 @@ const QueryResponse = ({ message }) => {
   return (
     <>
       {message && (
-        <div className="pl-40 pt-20">
+        <div className="md:pl-40 md:pt-20">
           <div className="overflow-auto h-80 text-white p-16">
             <div className="flex justify-end m-3">
               <h1 className=" p-2 bg-[#393939] rounded-full  w-fit">

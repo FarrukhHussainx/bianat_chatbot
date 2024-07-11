@@ -4,7 +4,7 @@ const Search = ({ setMessage }) => {
   return (
     <>
       <div className="fixed bottom-0 w-full grid grid-cols-1 p-5 justify-items-center items-center">
-        <div className="relative w-8/12">
+        <div className="relative w-10/12 md:w-8/12">
           <input
             type="text"
             className="p-4 rounded w-full"
