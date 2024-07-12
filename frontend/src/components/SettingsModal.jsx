@@ -1,15 +1,30 @@
-import { Button, Dialog, DialogPanel, DialogTitle } from "@headlessui/react";
+import {
+  Button,
+  Dialog,
+  DialogPanel,
+  DialogTitle,
+  Switch,
+} from "@headlessui/react";
 import { Menu, MenuButton, MenuItem, MenuItems } from "@headlessui/react";
 import { useState } from "react";
-import { BiCustomize } from "react-icons/bi";
-import { FaApple } from "react-icons/fa";
-import { FaGoogle } from "react-icons/fa";
-import { FaMicrosoft } from "react-icons/fa";
+import { RiVoiceprintLine } from "react-icons/ri";
 import { IoSettingsOutline } from "react-icons/io5";
+import { LuDatabase } from "react-icons/lu";
+import { GrShieldSecurity } from "react-icons/gr";
+import { RiProfileLine } from "react-icons/ri";
+import { IoIosArrowDown } from "react-icons/io";
+import SwitchButton from "./SwitchButton";
+
+const data = [
+  { icon: <IoSettingsOutline />, title: "Settings" },
+  { icon: <RiVoiceprintLine />, title: "Speech" },
+  { icon: <LuDatabase />, title: "Data Controls" },
+  { icon: <RiProfileLine />, title: "Builder Profile" },
+  { icon: <GrShieldSecurity />, title: "Security" },
+];
 
 export default function SettingsModal() {
   let [isOpen, setIsOpen] = useState(false);
-
   function open() {
     setIsOpen(true);
   }
@@ -38,46 +53,61 @@ export default function SettingsModal() {
           <div className="flex min-h-full items-center justify-center p-4">
             <DialogPanel
               transition
-              className="w-full max-w-md rounded-xl bg-white/5 p-6 backdrop-blur-2xl duration-300 ease-out data-[closed]:transform-[scale(95%)] data-[closed]:opacity-0"
+              className="w-full max-w-md rounded-xl bg-[#343434] p-3 backdrop-blur-2xl duration-300 ease-out data-[closed]:transform-[scale(95%)] data-[closed]:opacity-0"
             >
               <div className="">
-                <input
-                  className="w-full bg-[#393939] rounded-md p-2 mb-3 shadow-sm"
-                  type="email"
-                  placeholder="email"
-                  required
-                />
-                <input
-                  className="w-full bg-[#393939] rounded-md p-2 mb-3 shadow-sm"
-                  type="password"
-                  placeholder="password"
-                  required
-                />
+                <h1 className="text-white ml-2 mb-2">Settings</h1>
+                <hr className="mb-3" />
+                <div className="flex  ">
+                  <div className=" w-4/12">
+                    {data.map((item, index) => (
+                      <div
+                        key={index}
+                        className="flex items-center mb-3 text-white gap-2 text-sm"
+                      >
+                        {item.icon}
+                        <h2>{item.title}</h2>
+                      </div>
+                    ))}
+                  </div>
+                  <div className="w-8/12 text-white ">
+                    <div className="flex justify-between items-center text-xs pb-3 border-b border-[#393939] mb-3">
+                      <h1>Theme</h1>
+                      <div className="flex items-center gap-1">
+                        <h1>System</h1>
+                        <IoIosArrowDown />
+                      </div>
+                    </div>
 
-                <Button
-                  className="inline-flex  items-center justify-center w-full  rounded-md mb-2 bg-[#004F84] py-1.5 px-3 text-sm/6 font-semibold text-white text-center shadow-inner shadow-white/10 focus:outline-none data-[hover]:bg-gray-600 data-[focus]:outline-1 data-[focus]:outline-white data-[open]:bg-gray-700"
-                  onClick={close}
-                >
-                  Continue
-                </Button>
-                <p className="text-white text-xs text-center mb-2">
-                  Don't have an account?
-                  <span className="text-[#1B8A35]"> Sign Up</span>
-                </p>
-                <div className="flex justify-center items-center gap-2 mb-2 text-[#C0C0C0]">
-                  <hr className="w-4/12" />
-                  <h1>OR</h1>
-                  <hr className="w-4/12" />
-                </div>
-                <div className="flex justify-center items-center gap-2 text-[#C0C0C0]">
-                  <div className="p-2 rounded-full shadow-md">
-                    <FaGoogle />
-                  </div>
-                  <div className="p-2 rounded-full shadow-md">
-                    <FaMicrosoft />
-                  </div>
-                  <div className="p-2 rounded-full shadow-md">
-                    <FaApple />
+                    <div className="flex justify-between items-center text-xs pb-3 border-b border-[#393939] mb-3">
+                      <h1>Always show code when using data analyts</h1>
+                      <SwitchButton />
+                    </div>
+                    <div className="flex justify-between items-center text-xs pb-3 border-b border-[#393939] mb-3">
+                      <h1>Language</h1>
+                      <div className="flex items-center gap-1">
+                        <h1>Auto - detect</h1>
+                        <IoIosArrowDown />
+                      </div>
+                    </div>
+                    <div className="flex justify-between items-center text-xs mb-6">
+                      <h1>Archived chats</h1>
+                      <button className="rounded-full text-center   border border-[#393939] w-[70px] h-[35px]">
+                        Cancel
+                      </button>
+                    </div>
+                    <div className="flex justify-between items-center text-xs pb-3 border-b border-[#393939] mb-3">
+                      <h1>Archive all chats</h1>
+                      <button className="rounded-full text-center   border border-[#393939] w-[70px] h-[35px]">
+                        Cancel
+                      </button>
+                    </div>
+                    <div className="flex justify-between items-center text-xs pb-3 border-b border-[#393939] mb-3">
+                      <h1>Archive all</h1>
+                      <button className="rounded-full text-center text-white bg-[#DA101C]  w-[70px] h-[35px]">
+                        Delete all
+                      </button>
+                    </div>
                   </div>
                 </div>
               </div>

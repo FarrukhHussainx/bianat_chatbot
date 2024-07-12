@@ -25,7 +25,7 @@ export default function UserProfile() {
         <MenuItems
           transition
           anchor="bottom end"
-          className="w-52 origin-top-right rounded-xl border mt-2 border-white/5 bg-white/5 p-3 text-sm/6 text-white transition duration-100 ease-out [--anchor-gap:var(--spacing-1)] focus:outline-none data-[closed]:scale-95 data-[closed]:opacity-0"
+          className="w-52 origin-top-right rounded-xl border mt-2 border-white/5 bg-[#393939] p-3 text-sm/6 text-white transition duration-100 ease-out [--anchor-gap:var(--spacing-1)] focus:outline-none data-[closed]:scale-95 data-[closed]:opacity-0"
         >
           <MenuItem>
             <div className="flex items-center gap-2 mb-2">

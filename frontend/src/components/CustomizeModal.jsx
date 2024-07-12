@@ -8,15 +8,14 @@ import {
 import { Menu, MenuButton, MenuItem, MenuItems } from "@headlessui/react";
 import { useState } from "react";
 import { BiCustomize } from "react-icons/bi";
-import { FaApple } from "react-icons/fa";
+import { FaApple, FaRegEyeSlash } from "react-icons/fa";
 import { FaGoogle } from "react-icons/fa";
-import { FaMicrosoft } from "react-icons/fa";
-import { IoEyeOutline } from "react-icons/io5";
 import ShowTipsModal from "./ShowTipsModal";
+import SwitchButton from "./SwitchButton";
 
 export default function CustomizeModal() {
   let [isOpen, setIsOpen] = useState(false);
-  const [enabled, setEnabled] = useState(false);
+  const [showtip, setShowtip] = useState(false);
 
   function open() {
     setIsOpen(true);
@@ -64,7 +63,23 @@ export default function CustomizeModal() {
                 />
                 <div className="flex justify-between items-center mb-2 text-[#C0C0C0]">
                   <h1>0/1500</h1>
-                  <ShowTipsModal />
+                  {showtip && (
+                    <button
+                      className="flex items-center gap-2"
+                      onClick={() => setShowtip(false)}
+                    >
+                      Hide Tips <FaRegEyeSlash />
+                    </button>
+                  )}
+                  {!showtip && (
+                    <button
+                      className="flex items-center gap-2"
+                      onClick={() => setShowtip(true)}
+                    >
+                      Show Tips <FaRegEyeSlash />
+                    </button>
+                  )}
+                  {showtip && <ShowTipsModal />}
                 </div>
 
                 <div className="text-xs text-white ml-2 mb-2 mt-3">
@@ -79,19 +94,10 @@ export default function CustomizeModal() {
                   <h1>0/1500</h1>
                 </div>
 
-                <div className="flex justify-between mt-6">
+                <div className="flex justify-between mt-6 gap-2">
                   <div className="flex justify-between items-center gap-2">
                     <h1 className="text-xs text-white">Enable for new chats</h1>
-                    <Switch
-                      checked={enabled}
-                      onChange={setEnabled}
-                      className="group relative flex h-7 w-14 cursor-pointer rounded-full bg-white/10 p-1 transition-colors duration-200 ease-in-out focus:outline-none data-[focus]:outline-1 data-[focus]:outline-white data-[checked]:bg-[#1B8A35]"
-                    >
-                      <span
-                        aria-hidden="true"
-                        className="pointer-events-none inline-block size-5 translate-x-0 rounded-full bg-white ring-0 shadow-lg transition duration-200 ease-in-out group-data-[checked]:translate-x-7"
-                      />
-                    </Switch>
+                    <SwitchButton />
                   </div>
                   <div className="flex gap-2">
                     <button className="rounded-full text-center text-[#c0c0c0]  border border-[#c0c0c0] w-[70px] h-[35px]">

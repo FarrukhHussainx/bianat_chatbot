@@ -1,6 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 
 const Search = ({ setMessage }) => {
+  const [messageVal, setMessageVal] = useState();
+  const handleMessage = (e) => {
+    console.log(e.target.value);
+    setMessageVal(e.target.value);
+  };
   return (
     <>
       <div className="fixed bottom-0 w-full grid grid-cols-1 p-5 justify-items-center items-center">
@@ -9,12 +14,13 @@ const Search = ({ setMessage }) => {
             type="text"
             className="p-4 rounded w-full"
             placeholder="Message Bianat"
+            onChange={handleMessage}
           />
           <span className="absolute inset-y-0 right-2 flex items-center ">
             <img
               src="/images/send.png"
               alt=""
-              onClick={() => setMessage("hello")}
+              onClick={() => setMessage(messageVal)}
             />
           </span>
         </div>

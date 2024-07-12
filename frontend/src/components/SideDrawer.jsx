@@ -22,7 +22,7 @@ const SideDrawer = () => {
       </button>
 
       <div
-        className={`fixed z-20 top-0 left-0 w-64 h-full bg-[#393939] text-white transform ${
+        className={`fixed z-10 top-0 left-0 w-64 h-full bg-[#393939] text-white transform ${
           isOpen ? "translate-x-0" : "-translate-x-full"
         } transition-transform duration-300 ease-in-out`}
       >

@@ -9,20 +9,20 @@ const Hero = ({ message }) => {
           <img src="/images/companylogo.png" alt="" />
           <div className="grid grid-cols-1  md:grid-cols-2 p-2 md:p-5 gap-1 md:gap-4 w-8/12 items-center">
             <HeroItems
-              title={"Real-Time Market Data"}
-              description={"Up-To-The-Minute Information"}
+              title={"Welcome to Stock Insight Hub"}
+              description={"Got it and Explore more..."}
             />
             <HeroItems
               title={"Real-Time Market Data"}
               description={"Up-To-The-Minute Information"}
             />
             <HeroItems
-              title={"Real-Time Market Data"}
-              description={"Up-To-The-Minute Information"}
+              title={"In-Depth Analysis and Reports"}
+              description={"Help you understand market movements"}
             />
             <HeroItems
-              title={"Real-Time Market Data"}
-              description={"Up-To-The-Minute Information"}
+              title={"Secure and Reliable"}
+              description={"Trust in our secure and reliable platform."}
             />
           </div>
         </div>
