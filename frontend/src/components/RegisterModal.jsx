@@ -39,19 +39,7 @@ export default function RegisterModal() {
               <div className="">
                 <input
                   className="w-full bg-[#393939] rounded-md p-2 mb-3 shadow-sm"
-                  type="text"
-                  placeholder="password"
-                  required
-                />
-                <input
-                  className="w-full bg-[#393939] rounded-md p-2 mb-3 shadow-sm"
-                  type="email"
-                  placeholder="email"
-                  required
-                />
-                <input
-                  className="w-full bg-[#393939] rounded-md p-2 mb-3 shadow-sm"
-                  type="password"
+                  type="tel"
                   placeholder="password"
                   required
                 />

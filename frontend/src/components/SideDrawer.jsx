@@ -4,6 +4,9 @@ import React, { useState } from "react";
 import { MdNotes } from "react-icons/md";
 import LoginModal from "./LoginModal";
 import RegisterModal from "./RegisterModal";
+import { SiCodemagic } from "react-icons/si";
+import { LuBoxes } from "react-icons/lu";
+import { BsThreeDots } from "react-icons/bs";
 
 const SideDrawer = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -32,17 +35,73 @@ const SideDrawer = () => {
         >
           <MdNotes />
         </button>
-        <div className="h-full flex justify-center items-end pb-8 text-white">
+        <div className="h-full flex flex-col justify-between">
+          <div className="m-5">
+            <h1>New</h1>
+          </div>
           <div>
-            <div className="flex flex-col w-fit gap-1 mx-auto mb-3 p-3">
-              <h1 className="text-base">Sign up or Log in</h1>
-              <p className="text-xs">
-                Get smarter responses ,images, upload files and more
-              </p>
+            <div className="flex items-center gap-2 m-4">
+              <div className="p-2 border border-white rounded-full ">
+                <img src="/images/Bianat.png" className="w-4 h-4 " alt="" />
+              </div>
+
+              <div>
+                <img src="/images/BianatName.png" alt="" />
+              </div>
             </div>
-            <div className="flex flex-col w-fit gap-3 mx-auto">
-              <LoginModal />
-              <RegisterModal />
+            <div className="flex items-center gap-2 m-4">
+              <div className="p-2 border border-white rounded-full ">
+                <LuBoxes className="w-4 h-4" />
+              </div>
+
+              <div>
+                <h1 className="text-xl">Explore Bianat</h1>
+              </div>
+            </div>
+          </div>
+          <div className="m-4">
+            <div className="mb-5 text-xs">
+              <h1>Yesterday</h1>
+              <div className="flex items-center gap-2">
+                <p>stoke exchange tips</p>
+                <BsThreeDots />
+              </div>
+            </div>
+            <div className="mb-5 text-xs">
+              <h1>Previous 7 days</h1>
+              <div className="flex items-center gap-2">
+                <p>stoke exchange tips</p>
+                <BsThreeDots />
+              </div>
+              <div className="flex items-center gap-2">
+                <p>stoke exchange tips</p>
+                <BsThreeDots />
+              </div>
+            </div>
+            <div className="mb-2 text-xs">
+              <h1>Previous 30 days</h1>
+              <div className="flex items-center gap-2">
+                <p>stoke exchange tips</p>
+                <BsThreeDots />
+              </div>
+              <div className="flex items-center gap-2">
+                <p>stoke exchange tips</p>
+                <BsThreeDots />
+              </div>
+            </div>
+          </div>
+          <div className=" pb-8 text-white">
+            <div>
+              <div className="flex flex-col w-fit gap-1 mx-auto mb-1 p-3">
+                <h1 className="text-base">Sign up or Log in</h1>
+                <p className="text-xs">
+                  Get smarter responses ,images, upload files and more
+                </p>
+              </div>
+              <div className="flex flex-col w-fit gap-1 mx-auto">
+                <LoginModal />
+                <RegisterModal />
+              </div>
             </div>
           </div>
         </div>
