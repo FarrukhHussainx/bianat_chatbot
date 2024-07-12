@@ -3,8 +3,7 @@
 import React, { useState } from "react";
 import { MdNotes } from "react-icons/md";
 import LoginModal from "./LoginModal";
-import RegisterModal from "./RegisterModal";
-import { SiCodemagic } from "react-icons/si";
+
 import { LuBoxes } from "react-icons/lu";
 import { BsThreeDots } from "react-icons/bs";
 
@@ -100,7 +99,6 @@ const SideDrawer = () => {
               </div>
               <div className="flex flex-col w-fit gap-1 mx-auto">
                 <LoginModal />
-                <RegisterModal />
               </div>
             </div>
           </div>

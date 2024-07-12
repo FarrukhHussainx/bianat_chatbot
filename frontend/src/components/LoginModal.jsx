@@ -38,7 +38,7 @@ export default function LoginModal() {
             >
               <div className="">
                 <input
-                  className="w-full bg-[#393939] rounded-md p-2 mb-3 shadow-sm"
+                  className="w-full border border-white bg-[#393939] rounded-md p-2 mb-3 shadow-sm"
                   type="tel"
                   placeholder="Phone Number"
                   required
