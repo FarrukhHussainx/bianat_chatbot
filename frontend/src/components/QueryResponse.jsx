@@ -5,8 +5,8 @@ const QueryResponse = ({ message }) => {
     <>
       {/* Destop and Tab responsive */}
       {message && (
-        <div className="hidden md:block md:pl-40 md:pt-20">
-          <div className="overflow-auto h-80 text-white p-16">
+        <div className="hidden md:block lg:pl-40 lg:pt-20">
+          <div className="overflow-auto h-[calc(100vh-20vh)] lg:h-[calc(100vh-37vh)] text-white p-16">
             <div className="flex justify-end m-3">
               <h1 className=" p-2 bg-[#393939] rounded-full  w-fit">
                 {message}
@@ -102,8 +102,8 @@ const QueryResponse = ({ message }) => {
       )}
       {/* mobile responsive */}
       {message && (
-        <div className="md:hidden ">
-          <div className="overflow-auto h-[500px] text-white p-4 pt-16">
+        <div className="md:hidden pt-16">
+          <div className="overflow-auto h-[calc(100vh-30vh)] text-white p-4 ">
             <div className="flex items-end mb-2">
               <h1 className=" p-2 bg-[#393939] rounded-md  w-fit">{message}</h1>
             </div>

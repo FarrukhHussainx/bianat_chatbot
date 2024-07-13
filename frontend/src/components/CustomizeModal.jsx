@@ -100,10 +100,16 @@ export default function CustomizeModal() {
                     <SwitchButton />
                   </div>
                   <div className="flex gap-2">
-                    <button className="rounded-full text-center text-[#c0c0c0]  border border-[#c0c0c0] w-[70px] h-[35px]">
+                    <button
+                      onClick={close}
+                      className="rounded-full text-center text-[#c0c0c0]  border border-[#c0c0c0] w-[70px] h-[35px]"
+                    >
                       Cancel
                     </button>
-                    <button className="rounded-full text-center bg-[#C0C0C0]  w-[70px] h-[35px]">
+                    <button
+                      onClick={close}
+                      className="rounded-full text-center bg-[#C0C0C0]  w-[70px] h-[35px]"
+                    >
                       Save
                     </button>
                   </div>
