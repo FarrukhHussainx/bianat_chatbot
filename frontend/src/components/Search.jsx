@@ -18,6 +18,7 @@ const Search = ({ setMessage }) => {
           />
           <span className="absolute inset-y-0 right-2 flex items-center ">
             <img
+              className="cursor-pointer"
               src="/images/send.png"
               alt=""
               onClick={() => setMessage(messageVal)}
